@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1013828493573",
+    "firebase_url": "https://moodfix-1b370-default-rtdb.firebaseio.com",
+    "project_id": "moodfix-1b370",
+    "storage_bucket": "moodfix-1b370.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013828493573:android:1e9cb989bbfdabca6e176c",
+        "android_client_info": {
+          "package_name": "com.example.smartchef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013828493573-nahpn262tsjb8qr562bmcus3s5cjoosk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXEtLreueZTLFODRRz06YiCBuPyrPWFkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013828493573-nahpn262tsjb8qr562bmcus3s5cjoosk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013828493573-5kb56ocj7lblrl8u4cc3tlvgd86iltjn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mood.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

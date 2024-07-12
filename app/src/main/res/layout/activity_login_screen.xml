@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/chef_logo">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Login to Personal Chef"
+        android:textAlignment="center"
+        android:textColor="@color/strawberry_600"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:padding="18dp"
+            android:orientation="vertical"
+            app:startIconDrawable="@drawable/baseline_person_24"
+            app:startIconTint="@color/grey_700"
+            android:enabled="true"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/grey_700"
+            android:textColorHint="@color/grey_700"
+            app:boxStrokeColor="@color/strawberry_600"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            android:hint="Username"
+            android:textColorHighlight="@color/grey_700"
+            app:cursorColor="@color/strawberry_600"
+            app:hintTextColor="@color/strawberry_600"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/username"
+                android:enabled="true"
+                android:padding="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColorHighlight="@color/grey_700"
+                android:textColor="@color/grey_700"
+                android:textSize="18dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:padding="18dp"
+            android:orientation="vertical"
+            android:textColorHint="@color/grey_700"
+            app:startIconDrawable="@drawable/baseline_lock_24"
+            app:startIconTint="@color/grey_700"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/grey_700"
+            android:hint="Password"
+            app:hintTextColor="@color/strawberry_600">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/password"
+                android:enabled="true"
+                android:padding="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColorHighlight="@color/grey_700"
+                android:textColor="@color/grey_700"
+                android:inputType="textPassword"
+                android:textSize="18dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/strawberry_600"
+            android:text="LOGIN"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            app:cornerRadius="30dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Don't have an account?"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:id="@+id/signupText"
+            android:textColor="@color/strawberry_600"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Contact sales"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:id="@+id/salesText"
+            android:textColor="@color/strawberry_600"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

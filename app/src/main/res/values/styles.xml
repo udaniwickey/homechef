@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Widget.Material3.TextInputLayout.OutlinedBox." parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox</item>
+
+        <item name="boxStrokeColor">@color/strawberry_600</item>
+        <item name="boxStrokeErrorColor">@macro/m3_comp_outlined_text_field_error_outline_color</item>
+        <item name="helperTextTextColor">@color/m3_textfield_indicator_text_color</item>
+        <item name="counterTextColor">@color/m3_textfield_indicator_text_color</item>
+        <item name="counterOverflowTextColor">@macro/m3_comp_outlined_text_field_error_supporting_text_color</item>
+        <item name="hintTextColor">@color/m3_textfield_label_color</item>
+        <item name="android:textColorHint">@color/m3_textfield_label_color</item>
+        <item name="placeholderTextColor">@color/m3_textfield_indicator_text_color</item>
+        <item name="prefixTextColor">@color/m3_textfield_indicator_text_color</item>
+        <item name="suffixTextColor">@color/m3_textfield_indicator_text_color</item>
+        <item name="errorTextColor">@macro/m3_comp_outlined_text_field_error_supporting_text_color</item>
+        <item name="errorIconTint">@macro/m3_comp_outlined_text_field_error_trailing_icon_color</item>
+        <item name="startIconTint">@color/m3_textfield_indicator_text_color</item>
+        <item name="endIconTint">@color/m3_textfield_indicator_text_color</item>
+        <item name="passwordToggleDrawable">@drawable/m3_password_eye</item>
+
+        <item name="counterTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
+        <item name="counterOverflowTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
+        <item name="errorTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
+        <item name="helperTextTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
+        <item name="hintTextAppearance">@macro/m3_comp_outlined_text_field_supporting_text_type</item>
+        <!-- Using same token from input text text appearance. -->
+        <item name="placeholderTextAppearance">@macro/m3_comp_outlined_text_field_input_text_type</item>
+        <item name="prefixTextAppearance">?attr/textAppearanceTitleMedium</item>
+        <item name="suffixTextAppearance">?attr/textAppearanceTitleMedium</item>
+        <!-- By default the cursor color is controlled via ?attr/colorControlActivated. -->
+        <item name="cursorColor">@null</item>
+        <item name="cursorErrorColor">@macro/m3_comp_outlined_text_field_error_outline_color</item>
+        <item name="shapeAppearance">@macro/m3_comp_outlined_text_field_container_shape</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+</resources>

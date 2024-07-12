@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartChef"
+        tools:targetApi="31">
+        <activity
+            android:name=".LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".RejectedBookings"
+            android:exported="false" />
+        <activity
+            android:name=".AcceptedBookings"
+            android:exported="false" />
+        <activity
+            android:name=".ViewBookingsChef"
+            android:exported="false" />
+        <activity
+            android:name=".AddBookingRequest"
+            android:exported="false" />
+        <activity
+            android:name=".UserDetailsScreen"
+            android:exported="false" />
+        <activity
+            android:name=".RatingsScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ChefDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChefDetailsScreen"
+            android:exported="false" />
+        <activity
+            android:name=".SearchChef"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerRegister"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".ChefDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".ChefRegister"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerLogin"
+            android:exported="false" />
+        <activity
+            android:name=".ChefLogin"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseActor"
+            android:exported="false" />
+        <activity
+            android:name=".IntroPage3"
+            android:exported="false" />
+        <activity
+            android:name=".IntroPage2"
+            android:exported="false"
+            android:label="@string/title_activity_intro_page2"
+            android:theme="@style/Theme.SmartChef" />
+        <activity
+            android:name=".IntroPage1"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginEnd="229dp"
+            android:fontFamily="@font/font1"
+            android:text="User Id"
+            android:textSize="20dp"
+            android:textColor="@color/green"/>
+
+        <TextView
+            android:id="@+id/user_id"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="0.08"
+            android:fontFamily="@font/robregular"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginEnd="229dp"
+            android:fontFamily="@font/font1"
+            android:text="Rating"
+            android:textSize="20dp"
+            android:textColor="@color/green"/>
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="0.08"
+            android:fontFamily="@font/robregular"
+            android:text="User Review"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginEnd="229dp"
+            android:fontFamily="@font/font1"
+            android:text="Review"
+            android:textSize="20dp"
+            android:textColor="@color/green"/>
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="11dp"
+        android:layout_weight="0.08"
+        android:fontFamily="@font/robregular"
+        android:text="Rating"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginEnd="229dp"
+            android:fontFamily="@font/font1"
+            android:text="Date"
+            android:textSize="20dp"
+            android:textColor="@color/green"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="0.08"
+            android:fontFamily="@font/robregular"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
