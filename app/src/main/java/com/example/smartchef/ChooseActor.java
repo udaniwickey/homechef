@@ -25,7 +25,7 @@ public class ChooseActor extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseActor.this, ChefLogin.class);
+                Intent intent = new Intent(ChooseActor.this, ChefRegister.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +33,7 @@ public class ChooseActor extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseActor.this, CustomerLogin.class);
+                Intent intent = new Intent(ChooseActor.this, CustomerRegister.class);
                 startActivity(intent);
             }
         });

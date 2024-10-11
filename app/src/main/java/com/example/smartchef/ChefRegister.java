@@ -24,17 +24,17 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ChefRegister extends AppCompatActivity {
 
-    EditText editText1;
-    EditText editText2;
-    EditText editText3;
-    EditText editText4;
-    EditText editText5;
-    EditText editText6;
-    EditText editText7;
-    EditText editText8;
-    EditText editText9;
+    EditText editTextName;
+    EditText editTextEmail;
+    EditText editTextAge;
+    EditText editTextGender;
+    EditText editTextLocation;
+    EditText editTextLanguages;
+    EditText editTextNumber;
+    EditText editTextDishes;
+    EditText editTextPassword;
 
-    EditText editText10;
+    EditText editTextExperience;
 
     Button reg;
     FirebaseDatabase rootNode;
@@ -47,16 +47,16 @@ public class ChefRegister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chef_register);
 
-        editText1=(EditText)findViewById(R.id.name);
-        editText2=(EditText)findViewById(R.id.email);
-        editText3=(EditText)findViewById(R.id.age);
-        editText4=(EditText)findViewById(R.id.gender);
-        editText5=(EditText)findViewById(R.id.location);
-        editText6=(EditText)findViewById(R.id.languages);
-        editText7=(EditText)findViewById(R.id.number);
-        editText8=(EditText)findViewById(R.id.dishes);
-        editText9=(EditText)findViewById(R.id.password);
-        editText10=(EditText)findViewById(R.id.experience);
+        editTextName = (EditText)findViewById(R.id.name);
+        editTextEmail = (EditText)findViewById(R.id.email);
+        editTextAge = (EditText)findViewById(R.id.age);
+        editTextGender = (EditText)findViewById(R.id.gender);
+        editTextLocation = (EditText)findViewById(R.id.location);
+        editTextLanguages = (EditText)findViewById(R.id.languages);
+        editTextNumber = (EditText)findViewById(R.id.number);
+        editTextDishes = (EditText)findViewById(R.id.dishes);
+        editTextPassword = (EditText)findViewById(R.id.password);
+        editTextExperience = (EditText)findViewById(R.id.experience);
         reg=(Button)findViewById(R.id.chefregister);
 
         firebaseAuth=FirebaseAuth.getInstance();
@@ -67,16 +67,16 @@ public class ChefRegister extends AppCompatActivity {
                 reference = FirebaseDatabase.getInstance().getReference("ChefDetails");
 //                reference = rootNode.getReference("Users");
 
-                final String namee = editText1.getText().toString();
-                final String emaill = editText2.getText().toString();
-                final String age = editText3.getText().toString();
-                final String gender = editText4.getText().toString();
-                final String location = editText5.getText().toString();
-                final String language = editText6.getText().toString();
-                final String number = editText7.getText().toString();
-                final String dishes = editText8.getText().toString();
-                final String password = editText9.getText().toString();
-                final String experience = editText10.getText().toString();
+                final String name = editTextName.getText().toString();
+                final String email = editTextEmail.getText().toString();
+                final String age = editTextAge.getText().toString();
+                final String gender = editTextGender.getText().toString();
+                final String location = editTextLocation.getText().toString();
+                final String language = editTextLanguages.getText().toString();
+                final String number = editTextNumber.getText().toString();
+                final String dishes = editTextDishes.getText().toString();
+                final String password = editTextPassword.getText().toString();
+                final String experience = editTextExperience.getText().toString();
 
 
                 if (!validateUserName() | !validateEmail() | !validateAge() | !validatePhone() | !validateGender() | !validateLocation() | !validateLanguage() | !validatedishes() | !validatePassword()| !validateExperience()) {
@@ -84,7 +84,7 @@ public class ChefRegister extends AppCompatActivity {
                 }
                 else{
 
-                    firebaseAuth.createUserWithEmailAndPassword(emaill, password)
+                    firebaseAuth.createUserWithEmailAndPassword(email, password)
                             .addOnCompleteListener(ChefRegister.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -92,14 +92,14 @@ public class ChefRegister extends AppCompatActivity {
 
                                         String userid = reference.push().getKey();
 
-                                        Chef members = new Chef(userid, namee, emaill, age, gender,location, language, number,dishes, experience, password);
+                                        Chef members = new Chef(userid, name, email, age, gender,location, language, number,dishes, experience, password);
                                         reference.child(userid).setValue(members);
 
                                         System.out.println(members);
                                         Toast.makeText(ChefRegister.this, "Sign up successfully", Toast.LENGTH_SHORT).show();
                                         SharedPreferences preferences = getSharedPreferences("user_emotions", MODE_PRIVATE);
                                         SharedPreferences.Editor editor = preferences.edit();
-                                        editor.putString("email", emaill);
+                                        editor.putString("email", email);
                                         editor.apply();
                                         Intent intent = new Intent(ChefRegister.this, ChefDashboard.class);
                                         startActivity(intent);
@@ -117,127 +117,127 @@ public class ChefRegister extends AppCompatActivity {
     }
 
     public boolean validateUserName() {
-        String value = editText1.getText().toString();
+        String value = editTextName.getText().toString();
         String noWhiteSpace = "\\A\\w{4,20}\\z";
 
         if (value.isEmpty()) {
-            editText1.setError("Field cannot be empty");
+            editTextName.setError("Field cannot be empty");
             return false;
         } else if (value.length() >= 15) {
-            editText1.setError("Username too long. limit to 15 characters");
+            editTextName.setError("Username too long. limit to 15 characters");
             return false;
         } else if (!value.matches(noWhiteSpace)) {
-            editText1.setError("White Spaces are not allowed");
+            editTextName.setError("White Spaces are not allowed");
             return false;
         } else {
-            editText1.setError(null);
+            editTextName.setError(null);
             return true;
         }
     }
 
     public boolean validateEmail() {
-        String value = editText2.getText().toString();
+        String value = editTextEmail.getText().toString();
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z].+[a-z]+\\.+[a-z]+";        //Regex Expression
 
         if (value.isEmpty()) {
-            editText2.setError("Field cannot be empty");
+            editTextEmail.setError("Field cannot be empty");
             return false;
         } else if (!value.matches(emailPattern)) {
-            editText2.setError("Invalid email address");
+            editTextEmail.setError("Invalid email address");
             return false;
         } else {
-            editText2.setError(null);
+            editTextEmail.setError(null);
             return true;
         }
     }
 
     public boolean validateAge() {
-        String value = editText3.getText().toString();
+        String value = editTextAge.getText().toString();
 
         if (value.isEmpty()) {
-            editText3.setError("Field cannot be empty");
+            editTextAge.setError("Field cannot be empty");
             return false;
         } else {
-            editText3.setError(null);
+            editTextAge.setError(null);
             return true;
         }
     }
 
     public boolean validatePhone() {
-        String value = editText7.getText().toString();
+        String value = editTextNumber.getText().toString();
 
         if (value.isEmpty()) {
-            editText7.setError("Field cannot be empty");
+            editTextNumber.setError("Field cannot be empty");
             return false;
         } else {
-            editText7.setError(null);
+            editTextNumber.setError(null);
             return true;
         }
     }
 
     public boolean validateGender() {
-        String value = editText4.getText().toString();
+        String value = editTextGender.getText().toString();
 
         if (value.isEmpty()) {
-            editText4.setError("Field cannot be empty");
+            editTextGender.setError("Field cannot be empty");
             return false;
         } else {
-            editText4.setError(null);
+            editTextGender.setError(null);
             return true;
         }
     }
 
     public boolean validateLocation() {
-        String value = editText5.getText().toString();
+        String value = editTextLocation.getText().toString();
 
         if (value.isEmpty()) {
-            editText5.setError("Field cannot be empty");
+            editTextLocation.setError("Field cannot be empty");
             return false;
         } else {
-            editText5.setError(null);
+            editTextLocation.setError(null);
             return true;
         }
     }
 
     public boolean validateLanguage() {
-        String value = editText6.getText().toString();
+        String value = editTextLanguages.getText().toString();
 
         if (value.isEmpty()) {
-            editText6.setError("Field cannot be empty");
+            editTextLanguages.setError("Field cannot be empty");
             return false;
         } else {
-            editText6.setError(null);
+            editTextLanguages.setError(null);
             return true;
         }
     }
 
     public boolean validatedishes() {
-        String value = editText8.getText().toString();
+        String value = editTextDishes.getText().toString();
 
         if (value.isEmpty()) {
-            editText8.setError("Field cannot be empty");
+            editTextDishes.setError("Field cannot be empty");
             return false;
         } else {
-            editText8.setError(null);
+            editTextDishes.setError(null);
             return true;
         }
     }
 
     public boolean validateExperience() {
-        String value = editText10.getText().toString();
+        String value = editTextExperience.getText().toString();
 
         if (value.isEmpty()) {
-            editText10.setError("Field cannot be empty");
+            editTextExperience.setError("Field cannot be empty");
             return false;
         } else {
-            editText10.setError(null);
+            editTextExperience.setError(null);
             return true;
         }
     }
 
 
     public boolean validatePassword() {
-        String value = editText9.getText().toString();
+        String value = editTextPassword.getText().toString();
         String password = "^" +
                 //"(?=.*[0-9])"     +           //at least 1 digit
                 //"(?=.*[a-z])"     +           //at least 1 lower case letter
@@ -249,13 +249,13 @@ public class ChefRegister extends AppCompatActivity {
                 "$";
 
         if (value.isEmpty()) {
-            editText9.setError("Field cannot be empty");
+            editTextPassword.setError("Field cannot be empty");
             return false;
         } else if (!value.matches(password)) {
-            editText9.setError("Password must have at least 1 special character, 2 numbers and letters");
+            editTextPassword.setError("Password must have at least 1 special character, 2 numbers and letters");
             return false;
         } else {
-            editText9.setError(null);
+            editTextPassword.setError(null);
             return true;
         }
     }
