@@ -31,51 +31,81 @@
                 android:fontFamily="@font/baloo"
                 android:textSize="30sp" />
 
-
-            <TextView
-                android:id="@+id/texView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:gravity="left"
-                android:text="Email"
-                android:textSize="16sp"
-                android:textColor="#000000" />
+                android:padding="15dp"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/Lemail"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/startbutton"
-                android:drawablePadding="10dp"
-                android:paddingLeft="10dp"
-                android:textColor="#000000"
-                android:inputType="textEmailAddress"
-                android:textSize="14sp" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedTextField_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="18dp"
+                    android:orientation="vertical"
+                    app:startIconDrawable="@drawable/baseline_person_24"
+                    app:startIconTint="@color/grey_700"
+                    android:enabled="true"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/grey_700"
+                    android:textColorHint="@color/grey_700"
+                    app:boxStrokeColor="@color/strawberry_600"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp"
+                    android:hint="Username"
+                    android:textColorHighlight="@color/grey_700"
+                    app:cursorColor="@color/strawberry_600"
+                    app:hintTextColor="@color/strawberry_600"
+                    >
 
-            <TextView
-                android:id="@+id/tw"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:gravity="left"
-                android:text="Password"
-                android:textSize="16sp"
-                android:textColor="#000000" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/username"
+                        android:enabled="true"
+                        android:padding="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColorHighlight="@color/grey_700"
+                        android:textColor="@color/grey_700"
+                        android:textSize="18dp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/Lpass"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/startbutton"
-                android:drawablePadding="10dp"
-                android:inputType="textPersonName"
-                android:paddingLeft="10dp"
-                android:textColor="#000000"
-                android:textSize="14sp" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedTextField_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="18dp"
+                    android:orientation="vertical"
+                    android:textColorHint="@color/grey_700"
+                    app:startIconDrawable="@drawable/baseline_lock_24"
+                    app:startIconTint="@color/grey_700"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/grey_700"
+                    android:hint="Password"
+                    app:hintTextColor="@color/strawberry_600">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/password"
+                        android:enabled="true"
+                        android:padding="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColorHighlight="@color/grey_700"
+                        android:textColor="@color/grey_700"
+                        android:inputType="textPassword"
+                        android:textSize="18dp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/login"
