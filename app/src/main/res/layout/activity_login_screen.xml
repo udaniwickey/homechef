@@ -109,10 +109,10 @@
 
         <Button
             android:id="@+id/loginButton"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/strawberry_600"
+            android:background="@drawable/buttonintro"
             android:text="LOGIN"
             android:textSize="18sp"
             android:textColor="@color/white"
@@ -131,15 +131,16 @@
             android:textColor="@color/strawberry_600"
             android:layout_marginBottom="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:text="Contact sales"
-            android:padding="8dp"
-            android:textAlignment="center"
-            android:id="@+id/salesText"
+            android:background="@drawable/startbutton"
+            android:text="SIGN UP"
+            android:textSize="18sp"
             android:textColor="@color/strawberry_600"
+            app:cornerRadius="30dp"
             android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
