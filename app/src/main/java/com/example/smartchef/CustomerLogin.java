@@ -3,6 +3,7 @@ package com.example.smartchef;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -24,13 +25,14 @@ public class CustomerLogin extends AppCompatActivity {
     Button log;
     FirebaseAuth firebaseAuth;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_login);
 
-        editText1=(EditText)findViewById(R.id.Lemail);
-        editText2=(EditText)findViewById(R.id.Lpass);
+        editText1=(EditText)findViewById(R.id.username);
+        editText2=(EditText)findViewById(R.id.password);
         log=(Button)findViewById(R.id.login);
         reg=(Button)findViewById(R.id.register);
 

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class ChooseActor extends AppCompatActivity {
-
     Button button1;
     Button button2;
 
@@ -25,7 +24,7 @@ public class ChooseActor extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseActor.this, ChefRegister.class);
+                Intent intent = new Intent(ChooseActor.this, ChefLogin.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +32,7 @@ public class ChooseActor extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseActor.this, CustomerRegister.class);
+                Intent intent = new Intent(ChooseActor.this, CustomerLogin.class);
                 startActivity(intent);
             }
         });

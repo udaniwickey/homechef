@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:text="Login to Personal Chef"
+        android:text="Login to Smart Chef"
         android:textAlignment="center"
         android:textColor="@color/strawberry_600"
         android:textSize="20sp"
